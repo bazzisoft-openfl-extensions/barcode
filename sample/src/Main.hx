@@ -1,15 +1,13 @@
 package ;
 
 import barcode.Barcode;
+import barcode.event.BarcodeScannedEvent;
+import flash.events.Event;
 import haxe.Timer;
 import haxekit.display.AutoScalingMainSprite;
 import haxekit.general.Logger;
 import haxekit.ui.Color;
-import flash.events.Event;
-import native_platform.event.MobileKeyboardPopupEvent;
 import native_platform.NativePlatform;
-import flash.events.FocusEvent;
-import flash.Lib;
 
 
 class Main extends AutoScalingMainSprite
@@ -37,7 +35,8 @@ class Main extends AutoScalingMainSprite
         
         stage.addEventListener(Event.RESIZE, function(e) { m_output.Write("Resize (w=" + stage.stageWidth + ", h=" + stage.stageHeight + ", sx=" + this.scaleX + ", sy=" + this.scaleY + ")"); } );        
         stage.addEventListener(Event.ACTIVATE, function(e) { m_output.Write("Activate"); } );        
-        stage.addEventListener(Event.DEACTIVATE, function(e) { m_output.Write("Deactivate"); } );        
+        stage.addEventListener(Event.DEACTIVATE, function(e) { m_output.Write("Deactivate"); } );                
+        stage.addEventListener(BarcodeScannedEvent.BARCODE_SCANNED, function(e) { m_output.Write("Barcode Scanned: type=" + e.barcodeType + ", value=" + e.barcodeValue); } );
     }    
     
     private function AddButton(btn:Button) : Void

@@ -8,10 +8,11 @@ class IOSBarcodeImpl implements IBarcodeImpl
     public function new() 
     {
         // Create links to external C functions
-        //m_cppVersion = cpp.Lib.load("Barcode", "Version", 0); 
+        m_cppScanBarcode = cpp.Lib.load("barcode", "ScanBarcode", 0); 
     }
     
     public function ScanBarcode() : Void
     {
+        return m_cppScanBarcode();
     }
 }

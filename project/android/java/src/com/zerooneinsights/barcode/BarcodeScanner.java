@@ -12,6 +12,9 @@ import com.zerooneinsights.android.runnable.ShowPhoneStatusBarRunnable;
 import android.app.Activity;
 import android.view.View;
 
+import com.google.zxing.integration.android.IntentIntegrator;
+
+
 /**
  * Provides static methods for the JNI to invoke the various native platform
  * functionality.
@@ -19,8 +22,10 @@ import android.view.View;
 
 public class BarcodeScanner
 {
-    public static void ScanBarcode()
+    public static boolean ScanBarcode()
     {
-        Utils.LogError("***TODO: Implement ScanBarcode()***");
+        //Utils.LogInfo("BarcodeScanner.ScanBarcode()");
+        IntentIntegrator integrator = new IntentIntegrator(GameActivity.getInstance());
+        return integrator.initiateScan();
     }
 }

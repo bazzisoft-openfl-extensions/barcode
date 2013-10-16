@@ -4,4 +4,6 @@
     <ndll name="barcode" />
     <java path="project/android/java/src" />
 
+    <template path="/project/android/java/templates/MainActivity.java" rename="src/com/zerooneinsights/barcodesample/MainActivity.java" if="android" />
+    
 </project>

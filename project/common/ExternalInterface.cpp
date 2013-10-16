@@ -29,7 +29,7 @@ DEFINE_ENTRY_POINT(EntryPoint);
 
 static value ScanBarcode()
 {
-    return alloc_null();
+    return alloc_bool(false);
 }
 DEFINE_PRIM(ScanBarcode, 0);
 

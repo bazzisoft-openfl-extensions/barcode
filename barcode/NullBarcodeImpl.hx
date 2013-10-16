@@ -10,7 +10,8 @@ class NullBarcodeImpl implements IBarcodeImpl
     {
     }
     
-    public function ScanBarcode() : Void
+    public function ScanBarcode() : Bool
     {
+        return false;
     }
 }

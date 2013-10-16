@@ -6,5 +6,5 @@ package barcode;
 
 interface IBarcodeImpl 
 {
-    function ScanBarcode() : Void;
+    function ScanBarcode() : Bool;
 }
