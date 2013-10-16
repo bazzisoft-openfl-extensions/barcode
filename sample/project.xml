@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+
+    <meta title="BarcodeSample" package="com.zerooneinsights.barcodesample" version="1.0.0" company="O1 Insights" />
+    <app main="Main" file="barcodesample" path="bin" />
+
+    <android target-sdk-version="14" />
+
+    <window background="#c0c0c0" fps="30" width="0" height="0" resizable="true" />
+    <window vsync="true" if="cpp" />
+    <window width="600" height="900" resizable="true" if="flash" />
+    <window width="600" height="900" resizable="true" if="windows" />
+
+    <source path="src" />
+    <include path="../../haxekit-0.2" />
+    <include path="../../native_platform-0.2" />
+    <include path="../" />
+
+    <haxelib name="openfl" />
+
+    <icon path="assets/openfl.svg" />
+    <assets path="assets/font" rename="font" include="*" />
+
+</project>

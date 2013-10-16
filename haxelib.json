@@ -1,0 +1,13 @@
+{
+  "name": "barcode",
+  "url": "",
+  "license": "MIT",
+  "tags": [],
+  "description": "",
+  "version": "0.1",
+  "releasenote": "",
+  "contributors": [""],
+  "dependencies": {
+    "openfl": ""
+  }
+}

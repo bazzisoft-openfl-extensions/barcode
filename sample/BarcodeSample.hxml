@@ -1,0 +1,19 @@
+-main ApplicationMain 
+-lib openfl
+-cp src
+-cp ../../haxekit-0.2/src
+-cp ../../haxekit-0.2
+-cp ../../native_platform-0.2
+-cp ..
+-D tools=1
+-D openfl_ver=1.0.10
+-D openfl
+-D display
+-D web
+--no-output
+-swf-version 11
+-swf bin/flash/bin/barcodesample.swf
+-swf-header 600:900:30:C0C0C0
+-cp bin/flash/haxe
+#--remap nme:flash
+
