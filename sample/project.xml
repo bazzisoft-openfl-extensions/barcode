@@ -18,7 +18,7 @@
     <include path="../" />
 
     <haxelib name="openfl" />
-
+    
     <icon path="assets/openfl.svg" />
     <assets path="assets/font" rename="font" include="*" />
 

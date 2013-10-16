@@ -11,8 +11,10 @@ class IOSBarcodeImpl implements IBarcodeImpl
         m_cppScanBarcode = cpp.Lib.load("barcode", "ScanBarcode", 0); 
     }
     
-    public function ScanBarcode() : Void
+    public function ScanBarcode() : Bool
     {
         return m_cppScanBarcode();
     }
+    
+    private var m_cppScanBarcode:Void -> Bool;
 }

@@ -13,23 +13,30 @@
 
 // This is required for some reason at least for iOS
 // It seems to be called instead of InitializeExtension on iOS.
-extern "C" int nativeplatform_register_prims() 
+extern "C" int barcode_register_prims() 
 {     
     printf("Barcode extension initializing...\n");
+#ifdef IPHONE
+    Barcode::Initialize();
+#endif        
     return 0; 
 }
 
-extern "C" void EntryPoint() 
+extern "C" void BarcodeEntryPoint() 
 {
     // Doesn't seem to be called.
 }
-DEFINE_ENTRY_POINT(EntryPoint);
+DEFINE_ENTRY_POINT(BarcodeEntryPoint);
 
 
 
 static value ScanBarcode()
 {
+#ifdef IPHONE
+    return alloc_bool(Barcode::ScanBarcode());
+#else
     return alloc_bool(false);
+#endif    
 }
 DEFINE_PRIM(ScanBarcode, 0);
 

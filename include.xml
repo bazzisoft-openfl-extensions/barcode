@@ -4,4 +4,11 @@
     <ndll name="barcode" />
     <java path="project/android/java/src" />
 
+    <dependency name="CoreMedia.framework" if="ios" />
+    <dependency name="CoreVideo.framework" if="ios" />
+    <dependency name="iconv" if="ios" />
+    <dependency name="project/iphone/ZBarSDK/libzbar.a" if="ios" />
+    
+    <assets path="/project/iphone/ZBarSDK/Resources" rename="" include="*" if="ios" />
+
 </project>
