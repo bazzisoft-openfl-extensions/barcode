@@ -5,6 +5,7 @@
     <app main="Main" file="barcodesample" path="bin" />
 
     <android target-sdk-version="14" />
+    <template path="../templates/MainActivity.java" rename="src/com/zerooneinsights/barcodesample/MainActivity.java" if="android" />
 
     <window background="#c0c0c0" fps="30" width="0" height="0" resizable="true" />
     <window vsync="true" if="cpp" />
