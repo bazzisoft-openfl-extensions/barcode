@@ -13,3 +13,16 @@ GOTCHAS
 Your Info.plist must support all device orientations for this to work, at least
 on the iOS simulator. If you're targeting a single orientation, override the Info.plist
 template and set all orientations there.
+
+
+
+SIMULATOR
+---------
+You can add photos to the simulator to emulate the camera by doing:
+    - Open the Window in mac where your images are stored.
+    - Open your simulator another side.
+    - Now drag your image from mac window to simulator, simulator will open safari, 
+      and in a safari tab your image will be shown.
+    - Tap & press down on image in simulator,
+    - There will be message to "save image", save image.
+    - It will be added to your iPhone simulator.
