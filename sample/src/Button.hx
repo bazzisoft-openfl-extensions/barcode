@@ -12,7 +12,7 @@ class Button extends Sprite
     private static inline var BUTTON_WIDTH = 385;
     private static inline var BUTTON_HEIGHT = 140;
     
-    private static inline function TEXTDEF() { return new TextFieldDefinition( { fontId:"font/Gotham-Black.ttf", fontSize:32, fontColor:Color.BLACK(), maxWidth:BUTTON_WIDTH, textAlign:TextAlignment.Center } ); }
+    private static inline function TEXTDEF() { return new TextFieldDefinition( { fontId:"font/Gotham-Black.ttf", fontSize:32, fontColor:Color.BLACK, maxWidth:BUTTON_WIDTH, textAlign:TextAlignment.Center } ); }
     
     public function new(label:String, color:Color, callbackFunc:Void -> Void) 
     {

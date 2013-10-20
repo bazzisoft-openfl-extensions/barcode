@@ -16,7 +16,7 @@ public class BarcodeMainActivity extends org.haxe.nme.GameActivity
         IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
         if (scanResult != null) 
         {
-            Log.i("trace", "Barcode scan complete");
+            Log.i("trace", "Barcode scan complete.");           
             Log.i("trace", scanResult.getFormatName());
             Log.i("trace", scanResult.getContents());
             
@@ -24,7 +24,7 @@ public class BarcodeMainActivity extends org.haxe.nme.GameActivity
         }
         else
         {
-            Log.e("trace", "Barcode scan failed");      
+            Log.e("trace", "Barcode scan cancelled/failed.");      
         }
     }    
 }

@@ -348,7 +348,7 @@ public class IntentIntegrator {
                                 orientation,
                                 errorCorrectionLevel);
       }
-      return new IntentResult();
+      return null;
     }
     return null;
   }

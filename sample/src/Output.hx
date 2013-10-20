@@ -11,7 +11,7 @@ import flash.text.TextField;
 
 class Output extends Sprite
 {
-    private static inline function TEXTDEF() { return new TextFieldDefinition( { fontId:"font/Gotham-Black.ttf", fontSize:24, fontColor:Color.BLACK(), maxWidth:Layout.SCREEN_WIDTH, textAlign:TextAlignment.Left } ); }
+    private static inline function TEXTDEF() { return new TextFieldDefinition( { fontId:"font/Gotham-Black.ttf", fontSize:24, fontColor:Color.BLACK, maxWidth:Layout.SCREEN_WIDTH, textAlign:TextAlignment.Left } ); }
     
     public function new() 
     {
@@ -19,7 +19,7 @@ class Output extends Sprite
         
         var buttonShape = new Shape();
         var g = buttonShape.graphics;
-        g.beginFill(Color.WHITE().AsInt());
+        g.beginFill(Color.WHITE.AsInt());
         g.drawRect(0, 0, Layout.SCREEN_WIDTH, Layout.SCREEN_HEIGHT/3);
         g.endFill();
         addChild(buttonShape);
