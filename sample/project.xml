@@ -8,7 +8,6 @@
     <template path="../templates/MainActivity.java" rename="src/com/zerooneinsights/barcodesample/MainActivity.java" if="android" />
 
     <window background="#c0c0c0" fps="30" width="0" height="0" resizable="true" />
-    <window vsync="true" if="cpp" />
     <window width="600" height="900" resizable="true" if="flash" />
     <window width="600" height="900" resizable="true" if="windows" />
 
