@@ -7,6 +7,8 @@ Add the following to your project.xml:
     <template path="../../barcode-0.1/templates/MainActivity.java" rename="src/my/app/package/MainActivity.java" if="android" />
 
     
+On iOS, copy project\iphone\ZBarSDK\Resources\* to your Xcode project root.
+    
     
 GOTCHAS
 -------
