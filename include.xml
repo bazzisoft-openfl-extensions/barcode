@@ -9,6 +9,6 @@
     <dependency name="iconv" if="ios" />
     <dependency name="project/iphone/ZBarSDK/libzbar.a" if="ios" />
     
-    <assets path="/project/iphone/ZBarSDK/Resources" rename="" include="*" if="ios" />
+    <assets path="project/iphone/ZBarSDK/Resources" rename="" include="*" if="ios" />
 
 </project>
