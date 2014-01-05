@@ -5,6 +5,18 @@
 #include "../../../native_platform-0.2/project/include/ExternalInterface.h"
 #include "ZBarSDK/Headers/ZBarSDK/ZBarSDK.h"
 
+
+//
+// Function that dynamically implements the NMEAppDelegate.supportedInterfaceOrientationsForWindow
+// callback to allow portrait orientation even if app only supports landscape.
+// This is required as barcode scanning camera simulator needs portrait mode.
+//
+static NSUInteger ApplicationSupportedInterfaceOrientationsForWindow(id self, SEL _cmd, UIApplication* application, UIWindow* window)
+{
+    return UIInterfaceOrientationMaskAll;
+}
+
+
 //
 // This class receives notifications from the iOS system.
 //
@@ -45,6 +57,11 @@ namespace Barcode
     void Initialize()
     {
         s_zbarReaderDelegate = [[ZBarReaderDelegate alloc] init];
+        
+        class_addMethod(NSClassFromString(@"NMEAppDelegate"),
+                        @selector(application:supportedInterfaceOrientationsForWindow:),
+                        (IMP) ApplicationSupportedInterfaceOrientationsForWindow,
+                        "I@:@@");
     }
     
     bool ScanBarcode() 
