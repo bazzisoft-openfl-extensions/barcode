@@ -10,14 +10,6 @@ Add the following to your project.xml:
 On iOS, copy project\iphone\ZBarSDK\Resources\* to your Xcode project root.
     
     
-GOTCHAS
--------
-Your Info.plist must support all device orientations for this to work, at least
-on the iOS simulator. If you're targeting a single orientation, override the Info.plist
-template and set all orientations there.
-
-
-
 SIMULATOR
 ---------
 You can add photos to the simulator to emulate the camera by doing:
