@@ -14,7 +14,7 @@
 	<files id="iphone">
 
         <compilerflag value="-Iinclude"/>
-        <compilerflag value="-I../../extensionkit-0.1/project/include"/>
+        <compilerflag value="-I../../extensionkit/project/include"/>
         <file name="iphone/BarcodeIPhone.mm"/>
 
 	</files>

@@ -8,7 +8,7 @@
 	<dependency name="barcode" path="dependencies/android" if="android" />
 	<android extension="org.haxe.extension.barcode.Barcode" />
 
-    <include path="../extensionkit-0.1" />
+    <include path="../extensionkit" />
 
     <dependency name="iconv" if="ios" />
     <dependency name="project/iphone/ZBarSDK/libzbar.a" if="ios" />
