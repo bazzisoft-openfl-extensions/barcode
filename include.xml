@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+
+	<ndll name="barcode" />
+
+	<!-- Use the following for an Android Java extension, not needed otherwise -->
+
+	<dependency name="barcode" path="dependencies/android" if="android" />
+	<android extension="org.haxe.extension.barcode.Barcode" />
+
+    <include path="../extensionkit-0.1" />
+
+    <dependency name="iconv" if="ios" />
+    <dependency name="project/iphone/ZBarSDK/libzbar.a" if="ios" />
+
+    <!--
+    If you don't want to override the project file, you'll need to manually
+    copy barcode/project/iphone/ZBarSDK/Resources/* into your top-level
+    Resources in Xcode.
+    -->
+    <template path="templates" />
+
+</project>
