@@ -48,7 +48,7 @@ static NSUInteger ApplicationSupportedInterfaceOrientationsForWindow(id self, SE
                                       extensionkit::CEND);
 
     // dismiss with a slight delay to avoid conflicting with the reader view still updating
-    [self performSelector:@selector(dismissReader:) withObject:reader afterDelay:0.0f];
+    [self performSelector:@selector(dismissReader:) withObject:reader afterDelay:1.0f];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)reader
