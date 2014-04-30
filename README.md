@@ -1,13 +1,15 @@
 Barcode
 =======
 
+### Real-time barcode scanning for iOS + Android
+
 This extension provides real-time barcode scanning functionality for iOS and Android, 
 directly from the device's camera.
 
-In iOS, it uses the ZBarSDK (http://zbar.sourceforge.net/iphone/) and the scanner is
+In iOS, it uses the [ZBarSDK](http://zbar.sourceforge.net/iphone/) and the scanner is
 integrated as a view inside the app.
 
-In Android, it uses the Google/ZXing Barcode Scanner app as a service. This app
+In Android, it uses the [Google/ZXing Barcode Scanner](https://play.google.com/store/apps/details?id=com.google.zxing.client.android) app as a service. This app
 must be installed separately for barcode scanning to work. The extension provides
 an indication if it's not installed when attempting to scan.
 
