@@ -11,6 +11,8 @@
     <include path="../extensionkit" />
 
     <dependency name="iconv" if="ios" />
+    <dependency name="CoreMedia.framework" if="ios" />
+    <dependency name="CoreVideo.framework" if="ios" />    
     <dependency name="project/iphone/ZBarSDK/libzbar.a" if="ios" />
 
     <!--
