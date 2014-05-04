@@ -79,6 +79,7 @@ namespace barcode
     {
         void InitializeIPhone()
         {
+            // Ensure we support portrait orientation else UIImagePickerController crashes
             class_addMethod(NSClassFromString(@"NMEAppDelegate"),
                             @selector(application:supportedInterfaceOrientationsForWindow:),
                             (IMP) ApplicationSupportedInterfaceOrientationsForWindow,
