@@ -8,8 +8,6 @@
 	<dependency name="barcode" path="dependencies/android" if="android" />
 	<android extension="org.haxe.extension.barcode.Barcode" />
 
-    <include path="../extensionkit" />
-
     <dependency name="iconv" if="ios" />
     <dependency name="CoreMedia.framework" if="ios" />
     <dependency name="CoreVideo.framework" if="ios" />    
