@@ -17,12 +17,13 @@ an indication if it's not installed when attempting to scan.
 Dependencies
 ------------
 
-- This extension implicitly includes `extensionkit` which must be available in a folder
+- This extension requires inclusion of `extensionkit` which must be available in a folder
   beside this one.
-- The extension overrides the Xcode project file `project.pbxproj` in order to include 
-  bundle resources required by the ZBarSDK library (iOS only).
+  
+- On iOS, this extension requires extra resources to be added to the app. Manually add the imagery from
+  `barcode/project/iphone/ZBarSDK/Resources` into the top-level Resources group in XCode.
 
-
+  
 Installation
 ------------
 
@@ -68,12 +69,5 @@ Usage
 
 ### XCode Project
 
-Currently, the extension uses a hack to add additional bundle resources required
-by the ZBarSDK library into the project. It uses a `<template/>` override to
-replace the `project.pbxproj` file with additional Resource references and it 
-copies the imagery in the `templates/PROJ/Classes` folder.
-
-If you decide to disable this (remove `<template path="templates" />` from the 
-extension's `include.xml`), ensure you manually add the imagery from
-`barcode/project/iphone/ZBarSDK/Resources` into the top-level Resources
-group in XCode.
+Manually add the imagery from `barcode/project/iphone/ZBarSDK/Resources` 
+into the top-level Resources group in XCode.

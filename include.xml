@@ -10,14 +10,7 @@
 
     <dependency name="iconv" if="ios" />
     <dependency name="CoreMedia.framework" if="ios" />
-    <dependency name="CoreVideo.framework" if="ios" />    
+    <dependency name="CoreVideo.framework" if="ios" />
     <dependency name="project/iphone/ZBarSDK/libzbar.a" if="ios" />
-
-    <!--
-    If you don't want to override the project file, you'll need to manually
-    copy barcode/project/iphone/ZBarSDK/Resources/* into your top-level
-    Resources in Xcode.
-    -->
-    <template path="templates" />
 
 </project>
